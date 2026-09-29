@@ -1,0 +1,67 @@
+DDP: 1 GPU · grad_accum điều chỉnh -> 8 (batch hiệu dụng 8 nhóm)
+config: {"model": "eval/ckpt/vn_reranker_ft_r2/epoch2", "pairs": "eval/train_pairs/legalir_pairs_fam.jsonl", "texts": "retrieval/db_fast/texts.json.gz", "out_dir": "eval/ckpt/vn_reranker_ft_fam", "n_neg": 7, "groups_per_batch": 1, "grad_accum": 8, "epochs": 2, "lr": 3e-06, "warmup": 0.1, "max_length": 512, "log_every": 25, "seed": 42, "reserve_gb": 9.5, "lora": false, "lora_r": 16, "lora_alpha": 32, "optim8bit": true}
+torch 2.6.0+cu124 · gpu NVIDIA GeForce RTX 2080 Ti · capability (7, 5) (bf16 = True)
+184368 chunk text
+tham số: 567,755,777 tổng · 311,753,729 huấn luyện (full, đóng băng embedding)
+5168 nhóm huấn luyện
+optimizer: AdamW 8-bit (tiết kiệm ~2GB state)
+/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/eval/train_reranker.py:150: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+5168 batch/epoch · 1292 bước cập nhật
+giữ chỗ VRAM: 7.75 GB · PyTorch reserved 9.88 GB
+/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/eval/train_reranker.py:185: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(dtype=torch.float16):
+ep 0 step 25/1292 · loss 0.8256 · acc@1 trong nhóm 0.7800 · lr 5.81e-07 · 1.7 phút
+ep 0 step 50/1292 · loss 0.9911 · acc@1 trong nhóm 0.7450 · lr 1.16e-06 · 3.5 phút
+ep 0 step 75/1292 · loss 0.8335 · acc@1 trong nhóm 0.7450 · lr 1.74e-06 · 5.2 phút
+ep 0 step 100/1292 · loss 0.8373 · acc@1 trong nhóm 0.7400 · lr 2.33e-06 · 7.0 phút
+ep 0 step 125/1292 · loss 1.0697 · acc@1 trong nhóm 0.6800 · lr 2.91e-06 · 8.8 phút
+ep 0 step 150/1292 · loss 0.9808 · acc@1 trong nhóm 0.6950 · lr 2.95e-06 · 10.5 phút
+ep 0 step 175/1292 · loss 0.6666 · acc@1 trong nhóm 0.7550 · lr 2.88e-06 · 12.3 phút
+ep 0 step 200/1292 · loss 0.8035 · acc@1 trong nhóm 0.7200 · lr 2.82e-06 · 14.1 phút
+ep 0 step 225/1292 · loss 0.7944 · acc@1 trong nhóm 0.7350 · lr 2.75e-06 · 15.8 phút
+ep 0 step 250/1292 · loss 0.8224 · acc@1 trong nhóm 0.7050 · lr 2.69e-06 · 17.6 phút
+ep 0 step 275/1292 · loss 0.6378 · acc@1 trong nhóm 0.7950 · lr 2.62e-06 · 19.3 phút
+ep 0 step 300/1292 · loss 0.7011 · acc@1 trong nhóm 0.7650 · lr 2.56e-06 · 21.1 phút
+ep 0 step 325/1292 · loss 0.8057 · acc@1 trong nhóm 0.7200 · lr 2.49e-06 · 22.8 phút
+ep 0 step 350/1292 · loss 0.7759 · acc@1 trong nhóm 0.7500 · lr 2.43e-06 · 24.6 phút
+ep 0 step 375/1292 · loss 0.6360 · acc@1 trong nhóm 0.7700 · lr 2.37e-06 · 26.4 phút
+ep 0 step 400/1292 · loss 0.6952 · acc@1 trong nhóm 0.7950 · lr 2.30e-06 · 28.1 phút
+ep 0 step 425/1292 · loss 0.7119 · acc@1 trong nhóm 0.7450 · lr 2.24e-06 · 29.9 phút
+ep 0 step 450/1292 · loss 0.6751 · acc@1 trong nhóm 0.7600 · lr 2.17e-06 · 31.7 phút
+ep 0 step 475/1292 · loss 0.6987 · acc@1 trong nhóm 0.7800 · lr 2.11e-06 · 33.5 phút
+ep 0 step 500/1292 · loss 0.7432 · acc@1 trong nhóm 0.7750 · lr 2.04e-06 · 35.3 phút
+ep 0 step 525/1292 · loss 0.9128 · acc@1 trong nhóm 0.7150 · lr 1.98e-06 · 37.2 phút
+ep 0 step 550/1292 · loss 0.7593 · acc@1 trong nhóm 0.7800 · lr 1.91e-06 · 38.9 phút
+ep 0 step 575/1292 · loss 0.8531 · acc@1 trong nhóm 0.7000 · lr 1.85e-06 · 40.7 phút
+ep 0 step 600/1292 · loss 0.8488 · acc@1 trong nhóm 0.7350 · lr 1.79e-06 · 42.4 phút
+ep 0 step 625/1292 · loss 0.6611 · acc@1 trong nhóm 0.8250 · lr 1.72e-06 · 44.2 phút
+đã lưu eval/ckpt/vn_reranker_ft_fam/epoch1
+ep 1 step 650/1292 · loss 0.5582 · acc@1 trong nhóm 0.8150 · lr 1.66e-06 · 46.3 phút
+ep 1 step 675/1292 · loss 0.5496 · acc@1 trong nhóm 0.8150 · lr 1.59e-06 · 48.0 phút
+ep 1 step 700/1292 · loss 0.5183 · acc@1 trong nhóm 0.8300 · lr 1.53e-06 · 49.8 phút
+ep 1 step 725/1292 · loss 0.7018 · acc@1 trong nhóm 0.7850 · lr 1.46e-06 · 51.6 phút
+ep 1 step 750/1292 · loss 0.6444 · acc@1 trong nhóm 0.8250 · lr 1.40e-06 · 53.4 phút
+ep 1 step 775/1292 · loss 0.5998 · acc@1 trong nhóm 0.7650 · lr 1.33e-06 · 55.6 phút
+ep 1 step 800/1292 · loss 0.6698 · acc@1 trong nhóm 0.7800 · lr 1.27e-06 · 57.4 phút
+ep 1 step 825/1292 · loss 0.6466 · acc@1 trong nhóm 0.8000 · lr 1.20e-06 · 59.2 phút
+ep 1 step 850/1292 · loss 0.5053 · acc@1 trong nhóm 0.8500 · lr 1.14e-06 · 61.1 phút
+ep 1 step 875/1292 · loss 0.5831 · acc@1 trong nhóm 0.8450 · lr 1.08e-06 · 62.8 phút
+ep 1 step 900/1292 · loss 0.6701 · acc@1 trong nhóm 0.7550 · lr 1.01e-06 · 64.6 phút
+ep 1 step 925/1292 · loss 0.4730 · acc@1 trong nhóm 0.8300 · lr 9.47e-07 · 66.5 phút
+ep 1 step 950/1292 · loss 0.6022 · acc@1 trong nhóm 0.8050 · lr 8.82e-07 · 68.4 phút
+ep 1 step 975/1292 · loss 0.6443 · acc@1 trong nhóm 0.7750 · lr 8.18e-07 · 70.2 phút
+ep 1 step 1000/1292 · loss 0.7489 · acc@1 trong nhóm 0.7750 · lr 7.53e-07 · 72.0 phút
+ep 1 step 1025/1292 · loss 0.7293 · acc@1 trong nhóm 0.7700 · lr 6.89e-07 · 73.8 phút
+ep 1 step 1050/1292 · loss 0.5961 · acc@1 trong nhóm 0.7900 · lr 6.24e-07 · 75.6 phút
+ep 1 step 1075/1292 · loss 0.5890 · acc@1 trong nhóm 0.8200 · lr 5.60e-07 · 77.4 phút
+ep 1 step 1100/1292 · loss 0.6250 · acc@1 trong nhóm 0.8050 · lr 4.95e-07 · 79.2 phút
+ep 1 step 1125/1292 · loss 0.6616 · acc@1 trong nhóm 0.8050 · lr 4.31e-07 · 80.9 phút
+ep 1 step 1150/1292 · loss 0.5225 · acc@1 trong nhóm 0.7950 · lr 3.66e-07 · 82.8 phút
+ep 1 step 1175/1292 · loss 0.7761 · acc@1 trong nhóm 0.7300 · lr 3.02e-07 · 84.6 phút
+ep 1 step 1200/1292 · loss 0.4849 · acc@1 trong nhóm 0.8250 · lr 2.37e-07 · 86.4 phút
+ep 1 step 1225/1292 · loss 0.8076 · acc@1 trong nhóm 0.7700 · lr 1.73e-07 · 88.2 phút
+ep 1 step 1250/1292 · loss 0.5417 · acc@1 trong nhóm 0.7650 · lr 1.08e-07 · 89.9 phút
+ep 1 step 1275/1292 · loss 0.5926 · acc@1 trong nhóm 0.7750 · lr 4.39e-08 · 91.7 phút
+đã lưu eval/ckpt/vn_reranker_ft_fam/epoch2
+xong sau 93.5 phút

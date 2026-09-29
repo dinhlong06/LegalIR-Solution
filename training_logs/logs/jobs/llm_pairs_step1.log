@@ -1,0 +1,146 @@
+5206 câu hỏi
+nạp index ...
+  20.6s
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 487.90it/s]
+No sentence-transformers model found with name eval/ckpt/e5_ft/epoch2. Creating a new one with MEAN pooling.
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at eval/ckpt/e5_ft/epoch2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 390, in <module>
+    main(p.parse_args())
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 346, in main
+    run_step1(args)
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 119, in run_step1
+    d, _, _ = e5_enc.encode(questions[i:i + args.batch_size], type="query")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/encoder.py", line 58, in encode
+    dense_vec = self.model.encode(query_text, normalize_embeddings=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/sentence_transformers/SentenceTransformer.py", line 371, in encode
+    out_features = self.forward(features)
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/container.py", line 250, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/sentence_transformers/models/Transformer.py", line 98, in forward
+    output_states = self.auto_model(**trans_features, return_dict=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 834, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 522, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 453, in forward
+    layer_output = apply_chunking_to_forward(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/pytorch_utils.py", line 239, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 465, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 364, in forward
+    hidden_states = self.intermediate_act_fn(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.venvs/uit_eval311/lib/python3.11/site-packages/transformers/activations.py", line 78, in forward
+    return self.act(input)
+           ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 28.00 MiB. GPU 0 has a total capacity of 10.57 GiB of which 10.88 MiB is free. Process 2987659 has 1.70 GiB memory in use. Process 2696801 has 2.82 GiB memory in use. Process 2381457 has 900.00 MiB memory in use. Process 2657740 has 2.75 GiB memory in use. Including non-PyTorch memory, this process has 2.40 GiB memory in use. Of the allocated memory 2.14 GiB is allocated by PyTorch, and 69.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+5206 câu hỏi
+nạp index ...
+  9.2s
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 1352.45it/s]
+No sentence-transformers model found with name eval/ckpt/e5_ft/epoch2. Creating a new one with MEAN pooling.
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at eval/ckpt/e5_ft/epoch2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 390, in <module>
+    main(p.parse_args())
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 346, in main
+    run_step1(args)
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 128, in run_step1
+    bge_val, bge_idx = bge_dm.search_batch(np.asarray(bge_dense_q), args.top_k_dense)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/fast_index.py", line 213, in search_batch
+    vals, idx = torch.topk(scores.float(), k=min(top_k, scores.shape[1]), dim=1)
+                           ^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.58 GiB. GPU 0 has a total capacity of 10.57 GiB of which 1.20 GiB is free. Process 2221753 has 2.42 GiB memory in use. Including non-PyTorch memory, this process has 2.35 GiB memory in use. Process 2851774 has 4.58 GiB memory in use. Of the allocated memory 2.16 GiB is allocated by PyTorch, and 4.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+5206 câu hỏi
+nạp index ...
+  5.4s
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 4190.81it/s]
+No sentence-transformers model found with name eval/ckpt/e5_ft/epoch2. Creating a new one with MEAN pooling.
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at eval/ckpt/e5_ft/epoch2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 390, in <module>
+    main(p.parse_args())
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 346, in main
+    run_step1(args)
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/run_pipeline_fast.py", line 128, in run_step1
+    bge_val, bge_idx = bge_dm.search_batch(np.asarray(bge_dense_q), args.top_k_dense)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/retrieval/fast_index.py", line 213, in search_batch
+    vals, idx = torch.topk(scores.float(), k=min(top_k, scores.shape[1]), dim=1)
+                           ^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 3.58 GiB. GPU 0 has a total capacity of 10.57 GiB of which 1.03 GiB is free. Process 2640844 has 2.82 GiB memory in use. Process 3147928 has 4.36 GiB memory in use. Including non-PyTorch memory, this process has 2.35 GiB memory in use. Of the allocated memory 2.16 GiB is allocated by PyTorch, and 4.90 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+5206 câu hỏi
+nạp index ...
+  9.7s
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 3427.37it/s]
+No sentence-transformers model found with name eval/ckpt/e5_ft/epoch2. Creating a new one with MEAN pooling.
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at eval/ckpt/e5_ft/epoch2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+giữ chỗ VRAM: 5.00 GB · PyTorch reserved 5.02 GB
+5206 câu hỏi
+nạp index ...
+  5.2s
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files: 100%|██████████| 30/30 [00:00<00:00, 1259.78it/s]
+No sentence-transformers model found with name eval/ckpt/e5_ft/epoch2. Creating a new one with MEAN pooling.
+Some weights of XLMRobertaModel were not initialized from the model checkpoint at eval/ckpt/e5_ft/epoch2 and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+giữ chỗ VRAM: 5.00 GB · PyTorch reserved 5.02 GB
+  encode 34.9s · retrieval 231.8s · pool 95 chunk/câu
+  eval/pools/train_fast/chan_bm25.jsonl.gz
+  eval/pools/train_fast/chan_bge.jsonl.gz
+  eval/pools/train_fast/chan_e5.jsonl.gz
+  eval/pools/train_fast/chan_bgesparse.jsonl.gz
+
+✅ step1: 138296 chunk trong pool, 355s

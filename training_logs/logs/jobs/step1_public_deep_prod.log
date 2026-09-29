@@ -1,0 +1,16 @@
+1000 câu hỏi
+nạp index ...
+  4.3s
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 30 files:   0%|          | 0/30 [00:00<?, ?it/s]Fetching 30 files:   7%|▋         | 2/30 [00:01<00:14,  1.98it/s]Fetching 30 files:  23%|██▎       | 7/30 [00:01<00:02,  7.94it/s]Fetching 30 files:  37%|███▋      | 11/30 [00:01<00:02,  8.85it/s]Fetching 30 files:  53%|█████▎    | 16/30 [00:01<00:00, 14.00it/s]Fetching 30 files:  67%|██████▋   | 20/30 [00:01<00:00, 12.61it/s]Fetching 30 files:  80%|████████  | 24/30 [00:02<00:00, 13.84it/s]Fetching 30 files:  90%|█████████ | 27/30 [00:03<00:00,  6.58it/s]Fetching 30 files:  93%|█████████▎| 28/30 [00:19<00:00,  6.58it/s]Fetching 30 files:  97%|█████████▋| 29/30 [00:36<00:03,  3.46s/it]Fetching 30 files: 100%|██████████| 30/30 [00:39<00:00,  3.39s/it]Fetching 30 files: 100%|██████████| 30/30 [00:39<00:00,  1.33s/it]
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights:  85%|████████▌ | 333/391 [00:00<00:00, 3317.44it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 3394.43it/s]
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]Loading weights:  29%|██▉       | 114/389 [00:00<00:00, 1036.45it/s]Loading weights:  56%|█████▌    | 218/389 [00:00<00:00, 670.04it/s] Loading weights: 100%|██████████| 389/389 [00:00<00:00, 1088.05it/s]
+Loading weights:   0%|          | 0/310 [00:00<?, ?it/s]Loading weights:  18%|█▊        | 55/310 [00:00<00:00, 526.06it/s]Loading weights:  85%|████████▍ | 263/310 [00:00<00:00, 1369.42it/s]Loading weights: 100%|██████████| 310/310 [00:00<00:00, 1241.89it/s]
+giữ chỗ VRAM: 2.50 GB (khoá cứng 0.00 GB, còn lại trong cache) · PyTorch reserved 4.73 GB
+  encode 103.2s · retrieval 34.3s · pool 830 chunk/câu
+  eval/pools/public_deep_prod/chan_bm25.jsonl.gz
+  eval/pools/public_deep_prod/chan_bge.jsonl.gz
+  eval/pools/public_deep_prod/chan_e5.jsonl.gz
+  eval/pools/public_deep_prod/chan_bgesparse.jsonl.gz
+
+✅ step1: 163455 chunk trong pool, 233s

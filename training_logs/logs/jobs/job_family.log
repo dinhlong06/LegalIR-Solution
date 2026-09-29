@@ -1,0 +1,16 @@
+[08-13 17:19] train negative cung ho tren GPU 7
+[08-13 18:53] eval epoch1 tren GPU 7
+[08-13 19:30] --- NEGATIVE CUNG HO · epoch1 (moc so sanh: 0,9404) ---
+devv2_fam_epoch1.json
+  toàn dev v2 (1794 câu)  recall 0.9270  precision 0.2028
+  hub        ( 793 câu)  recall 0.8855
+  không hub  (1001 câu)  recall 0.9599
+  TÁI CÂN (hub=23.0% như train thật)  recall 0.9427  precision 0.2032
+[08-13 19:30] eval epoch2 tren GPU 7
+[08-13 20:08] --- NEGATIVE CUNG HO · epoch2 (moc so sanh: 0,9404) ---
+devv2_fam_epoch2.json
+  toàn dev v2 (1794 câu)  recall 0.9273  precision 0.2030
+  hub        ( 793 câu)  recall 0.8873
+  không hub  (1001 câu)  recall 0.9589
+  TÁI CÂN (hub=23.0% như train thật)  recall 0.9424  precision 0.2032
+[08-13 20:08] XONG

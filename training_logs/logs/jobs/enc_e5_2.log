@@ -1,0 +1,17 @@
+shard 2/4: 46092/184368 chunk
+  32/46092 · 16.3 ms/chunk
+  3232/46092 · 8.3 ms/chunk
+  6432/46092 · 10.5 ms/chunk
+  9632/46092 · 11.4 ms/chunk
+  12832/46092 · 11.8 ms/chunk
+  16032/46092 · 12.1 ms/chunk
+  19232/46092 · 12.2 ms/chunk
+  22432/46092 · 12.3 ms/chunk
+  25632/46092 · 12.5 ms/chunk
+  28832/46092 · 12.5 ms/chunk
+  32032/46092 · 12.5 ms/chunk
+  35232/46092 · 12.6 ms/chunk
+  38432/46092 · 12.7 ms/chunk
+  41632/46092 · 12.7 ms/chunk
+  44832/46092 · 12.8 ms/chunk
+✅ eval/cache/e5ft_dense.shard2of4.npy · 590s

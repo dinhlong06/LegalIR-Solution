@@ -1,0 +1,13 @@
+# trọng số, index, kết quả chạy — không vào git (phát hành qua Docker image)
+models/
+index/
+output/
+data_splits/
+training_logs/pairs/
+# output của chuỗi retrain (driver ghi explicit dưới output/; default module cũng ở đây)
+train_pairs/
+ckpt/
+splits/
+splits_v2/
+__pycache__/
+*.pyc

@@ -1,0 +1,14 @@
+# CẤU HÌNH CHÍNH — bài private tốt nhất 937899 `fam_twinall_nosalary` = 0,9491 (result.md §92):
+# nền fam + R3 chèn-hết, không R1. (Bài cũ `fam_twin070_nopool`: public 0,9594, private 0,9487.)
+# Retriever: vnembv2_ft/epoch2 (kênh bge) + harrier_ft/epoch2 (kênh e5) · CE: fam/epoch1
+# (FT từ vn_reranker_ft_r2/epoch2 trên legalir_pairs_fam — negative cùng họ, train v2).
+# Nền public `submission_qwen3rr_headings_a0.15` (0,9554) chấm trên pool `public_deep_prod` (depth 300).
+name: fam
+dense_model: models/vnembv2_ft_ep2
+dense_prefix: index/dense/vnembv2ft_dense
+e5_model: models/harrier_ft_ep2
+e5_prefix: index/dense/harrierft_dense
+ce_model: models/ce_fam_ep1
+topk_bm25: 300
+topk_dense: 300
+reference: fam_twinall_nosalary.json

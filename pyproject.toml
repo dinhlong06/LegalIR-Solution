@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+# Package LegalIR (UIT DSC 2026 · Task 1) — đội Artiz, giấy phép MIT.
+# KHÔNG khai báo dependencies ở đây: hai tầng pipeline cần hai môi trường Python không
+# tương thích (transformers 5.16.1 vs 4.44.2 + FlagEmbedding 1.2.11) — pin trong
+# env/requirements_retrieval.txt và env/requirements_ce.txt, cài vào hai venv riêng.
+# `legalir` console script chỉ stdlib + PyYAML (có sẵn ở cả hai venv).
+
+[project]
+name = "legalir"
+version = "1.0.0"
+description = "UIT DSC 2026 Task 1 LegalIR — pipeline truy hồi văn bản pháp luật (retrieval -> rerank -> blend -> validate)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Artiz" }]
+
+[project.scripts]
+legalir = "legalir.cli:main"
+
+[tool.setuptools]
+packages = ["legalir", "legalir.index", "legalir.train"]

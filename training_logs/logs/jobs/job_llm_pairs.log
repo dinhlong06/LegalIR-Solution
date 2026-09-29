@@ -1,0 +1,35 @@
+[08-13 14:36] step1 tap train tren GPU 2
+[08-13 14:37] step1 that bai, cho 4 phut
+[08-13 15:01] step1 tap train tren GPU 5
+[08-13 15:03] step1 that bai, cho 4 phut
+[08-13 15:04] xep hang sau PID 2485376 (uu tien GPU 6)
+[08-13 15:49] step1 tap train tren GPU 1
+[08-13 15:50] step1 that bai, cho 4 phut
+[08-13 15:54] step1 tap train tren GPU 1
+[08-13 15:56] step1 tap train tren GPU 3
+[08-13 16:02] pool train xong
+[08-13 16:02] cham shard 0 tren GPU 0
+[08-13 16:03] cham shard 1 tren GPU 1
+[08-13 16:07] cham shard 2 tren GPU 2
+[08-13 16:15] cham shard 3 tren GPU 5
+[08-13 16:36] shard 0 xong
+[08-13 16:37] shard 1 xong
+[08-13 16:40] shard 3 xong
+[08-13 16:42] shard 2 xong
+✅ eval/train_pairs/llm_pairs.jsonl · 0 mẫu · bỏ 5206 câu không có gold trong pool
+Traceback (most recent call last):
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/eval/mine_llm_pairs.py", line 168, in <module>
+    main(p.parse_args())
+  File "/workingspace_aiclub/WorkingSpace/Personal/vannk/uit_dsc_2026/eval/mine_llm_pairs.py", line 150, in main
+    r = json.loads(f.readline())
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vannk/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[08-13 16:43] XONG — eval/train_pairs/llm_pairs.jsonl
