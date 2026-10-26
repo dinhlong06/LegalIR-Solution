@@ -13,6 +13,11 @@ Self-contained package: MIT-licensed inference pipeline (retrieval → rerank �
 | public | `submission_cleanpool_twin070_nopool.zip` | **0,9599** |
 | private | `fam_twinall_nosalary.zip` (submission id 937899) | **0,9491** |
 
+### Official leaderboard evidence
+
+- [UIT-DSC 2026 Subtask 1 results](https://www.codabench.org/competitions/17715/#/results-tab) — Private Phase, rank **#12**, participant `hohoangluan`, submission ID `937899`, Recall **0.9491**. The submission ID matches the private reproduction listed above.
+- This package is published under the **Team Artiz** project name; the leaderboard displays the submitter account name, not a full team roster.
+
 **Model weights (Google Drive):** https://drive.google.com/file/d/1XdJujbmwTsvAoNEp4L7N2qkOrxbHYJUJ/view?pli=1
 (`legalir_models.zip`, ≈8.4 GB — the 5 checkpoints of the table in §1, matching `models/` byte for
 byte; verify against `../check/SHA256SUMS`).
